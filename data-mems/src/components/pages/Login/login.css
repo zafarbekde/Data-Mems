@@ -30,14 +30,13 @@ body {
 }
 
 .form-control::placeholder {
-    
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 99.8%;
-font-size: 16px;
-color: #C9C9C9;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 99.8%;
+    font-size: 16px;
+    color: #C9C9C9;
 }
 
 .form-control:hover {
@@ -49,7 +48,7 @@ color: #C9C9C9;
     outline: none;
 }
 
-.label{
+.label {
     display: flex;
     flex-direction: column;
 }
