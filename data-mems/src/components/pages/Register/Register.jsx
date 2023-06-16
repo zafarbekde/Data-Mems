@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import DataMems from '../../assets/data-mems.png';
 import './register.css';
+import LoginForm from '../Login/LoginForm';
 
 function Register() {
   const [name, setName] = useState('');
@@ -84,7 +85,7 @@ function Register() {
               </button>
             </div>
             <div className="register-link">
-              <a href="#">Login</a>
+              <a href={LoginForm}>Login</a>
             </div>
           </div>
         </form>
