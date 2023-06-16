@@ -3,21 +3,28 @@
 body {
     background-color: #f5f5f5;
     font-family: 'Inter';
+    transition: all 0.5s ease;
+   
 }
 
 .box {
     width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     height: 600px;
 }
 
 .form-signin-heading {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 43px;
-    text-align: center;
-    line-height: 99.8%;
-    color: rgba(255, 0, 0, 0.56);
+    padding: 50px;
+    margin: 0 auto;
+}
+
+.form-loginn{
+    width: 100%;
+    display: flex;
+    
 }
 
 .form-control {
@@ -60,9 +67,18 @@ body {
     align-items: center;
     gap: 15px;
 }
+.middle{
+    width: 100%;
+}
 
 .btn {
-    width: 60%;
+    width: 100%;
     padding: 15px 2px;
     font-size: 18px;
+}
+
+.register-link a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #00B2FF;
 }
