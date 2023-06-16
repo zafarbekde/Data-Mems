@@ -1,0 +1,85 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+
+body {
+    background-color: #f8f8f8;
+    font-family: 'Inter';
+    transition: all 0.5s ease;
+   
+}
+
+.box {
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 600px;
+}
+
+.form-signin-heading {
+    padding: 50px;
+    margin: 0 auto;
+}
+
+.form-loginn{
+    width: 100%;
+    display: flex;
+    
+}
+
+.form-control {
+    width: 256px;
+    height: 45px;
+    background: #FFFFFF;
+    border: 1px solid #0606062b;
+    border-radius: 8px;
+    padding: 5px 17px;
+}
+
+.form-control::placeholder {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 99.8%;
+    font-size: 16px;
+    color: #C9C9C9;
+}
+
+.form-control:hover {
+    border: 1px solid #00b3ff4e;
+}
+
+.form-control:focus {
+    border: 1px solid #00B2FF;
+    outline: none;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+}
+
+.bigbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.middle{
+    width: 100%;
+}
+
+.btn {
+    width: 100%;
+    padding: 15px 2px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.register-link a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #00B2FF;
+}
