@@ -1,8 +1,9 @@
-import React, { useState } from 'react';    
+import React, { useState } from 'react';
 import DataMems from '../../assets/data-mems.png';
 import './register.css';
 
 function Register() {
+  const [name, setName] = useState('');
   const [surname, setSurname] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -31,7 +32,7 @@ function Register() {
             <img className="form-signin-heading" src={DataMems} alt="" />
           </div>
           <div className="bigbox">
-          <div style={{ marginBottom: '20px' }} className="label">
+            <div style={{ marginBottom: '20px' }} className="label">
               <input
                 type="text"
                 value={name}
