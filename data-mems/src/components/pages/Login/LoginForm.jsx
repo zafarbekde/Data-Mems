@@ -10,11 +10,11 @@ const LoginForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-  };
+  };  
 
   return (
     <div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <form onSubmit={handleSubmit} style={{ backgroundColor: '#fff', padding: '20px', borderRadius: '5px' }} className='box form-signin'>
+      <form onSubmit={handleSubmit} style={{ backgroundColor: '#fff',  padding: '20px', borderRadius: '5px' }} className='box form-signin'>
         <div className="form-loginn">
           <img className='form-signin-heading' src={DataMems} alt="" />
         </div>
