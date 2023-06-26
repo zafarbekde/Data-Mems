@@ -113,6 +113,16 @@ function Home() {
                                             Animals
                                         </button>
                                     </li>
+
+                                    <li>
+                                        <button
+                                            className={`category-item ${selectedCategory === 'girls' ? 'active' : ''
+                                                }`}
+                                            onClick={() => handleCategoryChange('girls')}
+                                        >
+                                            Girls
+                                        </button>
+                                    </li>
                                     {/* Add more categories as needed */}
                                 </ul>
                             )}
