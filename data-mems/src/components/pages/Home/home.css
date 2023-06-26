@@ -19,12 +19,14 @@
     padding: 20px;
     justify-content: center;
     align-items: center;
+    gap: 1000px;
 }
 
 .menu ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .left-logo a {
@@ -60,8 +62,6 @@
     width: 30px;
     color: #00B2FF;
 }
-
-
 
 .dropdown {
     position: relative;
@@ -116,4 +116,42 @@
     background-color: #00B2FF;
     color: #fff;
   }
+
+  .image-container{
+    padding: 100px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    object-fit: cover;
+  }
+
+  .image-container .image-api{
+    width: 450px;
+    
+  }
+
+  .pagination {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pagination-item {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .pagination-item.active {
+    background-color:#00B2FF;
+    color: #fff;
+  }
+  
   
