@@ -123,6 +123,46 @@ function Home() {
                                             Girls
                                         </button>
                                     </li>
+
+                                    <li>
+                                        <button
+                                            className={`category-item ${selectedCategory === 'games' ? 'active' : ''
+                                                }`}
+                                            onClick={() => handleCategoryChange('games')}
+                                        >
+                                            Games
+                                        </button>
+                                    </li>
+
+                                    <li>
+                                        <button
+                                            className={`category-item ${selectedCategory === 'cute' ? 'active' : ''
+                                                }`}
+                                            onClick={() => handleCategoryChange('cute')}
+                                        >
+                                            Cute
+                                        </button>
+                                    </li>
+
+                                    <li>
+                                        <button
+                                            className={`category-item ${selectedCategory === 'cars' ? 'active' : ''
+                                                }`}
+                                            onClick={() => handleCategoryChange('cars')}
+                                        >
+                                            Cars
+                                        </button>
+                                    </li>
+
+                                    <li>
+                                        <button
+                                            className={`category-item ${selectedCategory === 'sci-fi' ? 'active' : ''
+                                                }`}
+                                            onClick={() => handleCategoryChange('sci-fi')}
+                                        >
+                                            Sci-Fi
+                                        </button>
+                                    </li>
                                     {/* Add more categories as needed */}
                                 </ul>
                             )}

@@ -112,7 +112,7 @@
   }
 
   .image-container{
-    padding: 100px 0;
+    padding: 50px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -128,7 +128,6 @@
   }
 
   .pagination {
-    
     display: flex;
     justify-content: center;
     align-items: center;
