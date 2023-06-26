@@ -50,6 +50,7 @@
     border: none;
     border-radius: 5px;
     transition: all 0.5s ease;
+    cursor: pointer;
 }
 
 .upload-btn:hover{
@@ -61,9 +62,15 @@
     color: #00B2FF;
 }
 
+.image-grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 100%;
+    grid-gap: 50px;
+}
 
-
-
-
-
-
+.image-grid .image-item{
+    width: 350px;
+    height: 480px;
+    object-fit: cover;
+}

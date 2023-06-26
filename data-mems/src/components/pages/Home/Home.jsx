@@ -1,33 +1,54 @@
 import React from 'react';
+import { useQuery } from 'react-query';
 import './home.css';
 
-
 function Home() {
-    return (
-        <div className="container">
-            <nav className="menu">
-                <ul>
-                    <div className="left-logo"><li><a href="/">Memes</a></li></div>
-                    <div className="right-menu">
-                        <li><button className='upload-btn' id='upload'> + Upload</button></li>
+  const selectedCategory = 'memes'; // Set your desired category here
 
-                        <li className='menu-profile'><a href="/profile"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                        </a></li>
-                    </div>
-                </ul>
-            </nav>
-
-            <div className="content-upload">
-                <h2>Welcom!</h2>
-            </div>
-
-            <div className="profile">
-                <h3>Профиль</h3>
-            </div>
-        </div>
+  const fetchImages = async () => {
+    const response = await fetch(
+      `https://pixabay.com/api/?key=563492ad6f91700001000001a9f2c1745627440f86cd94bd8aa19fed&q=${selectedCategory}&per_page=6&page=1`
     );
+    const data = await response.json();
+    return data.hits;
+  };
+
+  const { data: images, isLoading, isError } = useQuery('images', fetchImages);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (isError) {
+    return <div>Error fetching images.</div>;
+  }
+
+  return (
+    <div className="container">
+      <nav className="menu">
+        {/* Menu code */}
+      </nav>
+
+      <div className="content-upload">
+        <h2>Welcome!</h2>
+        <div className="image-grid">
+          {images.map((image) => (
+            <img
+              key={image.id}
+              src={image.webformatURL}
+              alt={image.tags}
+              className="image-item"
+            />
+          ))}
+        </div>
+        {/* Pagination code */}
+      </div>
+
+      <div className="profile">
+        <h3>Профиль</h3>
+      </div>
+    </div>
+  );
 }
 
 export default Home;
