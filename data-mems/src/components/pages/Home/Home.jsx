@@ -210,9 +210,26 @@ function Home() {
 
             <div className="image-container">
                 {images.map((image) => (
-                    <img className='image-api' key={image.id} src={image.webformatURL} alt={image.tags} />
+                    <div className="image-card" key={image.id}>
+                        <img className="image-api" src={image.webformatURL} alt={image.tags} />
+                        <div className="image-actions">
+                            <button className="action-button">
+                                <i className="fas fa-heart"></i> Like
+                            </button>
+                            <button className="action-button">
+                                <i className="fas fa-share"></i> Share
+                            </button>
+                            <a href={image.largeImageURL} download className="action-button">
+                                <i className="fas fa-download"></i> Download
+                            </a>
+                            <button className="action-button">
+                                <i className="fas fa-comment"></i> Comment
+                            </button>
+                        </div>
+                    </div>
                 ))}
             </div>
+
 
             <div className="pagination">
                 <button
