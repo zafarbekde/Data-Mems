@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import Modal from '../Upload/Upload';
 import './home.css';
 
 function Home() {
@@ -10,6 +11,15 @@ function Home() {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [perPage] = useState(6);
     const [visiblePages] = useState(5);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
 
 
     useEffect(() => {
@@ -108,6 +118,7 @@ function Home() {
                                         <button
                                             className={`category-item ${selectedCategory === 'animals' ? 'active' : ''
                                                 }`}
+
                                             onClick={() => handleCategoryChange('animals')}
                                         >
                                             Animals
@@ -169,9 +180,11 @@ function Home() {
                         </li>
 
                         <li>
-                            <button className="upload-btn" id="upload">
+                            <button className="upload-btn" id="upload" onClick={openModal}>
                                 + Upload
                             </button>
+
+                            {isModalOpen && <Modal closeModal={closeModal} />}
                         </li>
                         <li className="menu-profile">
                             <a href="/profile">
@@ -191,7 +204,6 @@ function Home() {
                                 </svg>
                             </a>
                         </li>
-
                     </div>
                 </ul>
             </nav>

@@ -118,7 +118,6 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
-    
   }
 
   .image-container .image-api{
@@ -147,5 +146,3 @@
     background-color:#00B2FF;
     color: #fff;
   }
-  
-  
