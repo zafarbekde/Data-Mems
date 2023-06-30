@@ -122,8 +122,8 @@
 }
 
 .image-container .image-api {
-  width: 350px;
-  height: 350px;
+  width: 400px;
+  height: 400px;
   object-fit: cover;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -143,6 +143,7 @@
   justify-content: center;
   background-color: transparent;
   border: none;
+  gap: 5px;
   color: #333;
   cursor: pointer;
   font-size: 14px;

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './upload.css'
 
 function Modal({ closeModal }) {
   const [uploadedImage, setUploadedImage] = useState(null);
