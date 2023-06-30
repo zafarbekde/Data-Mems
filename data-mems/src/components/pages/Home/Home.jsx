@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Modal from '../Upload/Upload';
 import './home.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart, faShare, faDownload, faComment } from '@fortawesome/free-solid-svg-icons';
+
 
 function Home() {
     const [images, setImages] = useState([]);
@@ -214,17 +217,18 @@ function Home() {
                         <img className="image-api" src={image.webformatURL} alt={image.tags} />
                         <div className="image-actions">
                             <button className="action-button">
-                                <i className="fas fa-heart"></i> Like
+                                <FontAwesomeIcon icon={faHeart} /> Like
                             </button>
                             <button className="action-button">
-                                <i className="fas fa-share"></i> Share
+                                <FontAwesomeIcon icon={faShare} /> Share
                             </button>
                             <a href={image.largeImageURL} download className="action-button">
-                                <i className="fas fa-download"></i> Download
+                                <FontAwesomeIcon icon={faDownload} /> Download
                             </a>
                             <button className="action-button">
-                                <i className="fas fa-comment"></i> Comment
+                                <FontAwesomeIcon icon={faComment} /> Comment
                             </button>
+
                         </div>
                     </div>
                 ))}
